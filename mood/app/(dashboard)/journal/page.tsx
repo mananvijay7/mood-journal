@@ -1,5 +1,6 @@
 import EntryCard from "@/app/components/EntryCard";
 import NewEntryCard from "@/app/components/NewEntryCard";
+import { analyze } from "@/utils/ai";
 import { getUserByClerkId } from "@/utils/auth";
 import { prisma } from "@/utils/db";
 import Link from "next/link";
@@ -14,8 +15,13 @@ const getEntries = async () => {
             orderBy: {
                   createdAt: 'desc',
             }
-      });
-      return entries;
+      })
+
+      await analyze(`
+      Today was really a good day from heart I purchased a pair of shoes that I was trying to get since
+      a long time, but it costed me more than I thought it would.
+      `);
+      return entries; 
 }
 
 
