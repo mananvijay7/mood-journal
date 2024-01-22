@@ -14,13 +14,13 @@ const getEntries = async () => {
             },
             orderBy: {
                   createdAt: 'desc',
-            }
+            },
       })
 
-      await analyze(`
-      Today was really a good day from heart I purchased a pair of shoes that I was trying to get since
-      a long time, but it costed me more than I thought it would.
-      `);
+      // await analyze(`
+      // Today was really a good day from heart I purchased a pair of shoes that I was trying to get since
+      // a long time, but it costed me more than I thought it would.
+      // `);
       return entries; 
 }
 
