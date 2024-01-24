@@ -5,6 +5,7 @@ import { div } from "three/examples/jsm/nodes/Nodes.js";
 const links = [
       {href: '/', label: 'Home'},
       { href: '/journal', label: 'Journal'},
+      { href: '/history', label: 'Journal'},
 ]
 
 const DashboardLayout = ({ children }) => {
